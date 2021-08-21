@@ -3,8 +3,8 @@
     <div id="sidebar">
       <clock/>
       <hello/>
-      <todoinput/>
-      <todolist/>
+      <todoinput v-on:add="addTodoItem"/>
+      <todolist v-bind:propsdata="todoItems" v-on:remove="removeTodoItem"/>
     </div>
     <div id="container">
       <board/>
@@ -30,6 +30,30 @@ export default {
     todolist,
     board,
     post
+  },
+  data(){
+    return{
+      todoItems: []
+    };
+  },
+  created(){
+    if(localStorage.length > 0){
+      for(let i = 0; i < localStorage.length; i++){
+        if(localStorage.key(i) !== "loglevel:webpack-dev-server"){
+          this.todoItems.push(localStorage.getItem(localStorage.key(i)));
+        }
+      }
+    }
+  },
+  methods: {
+    addTodoItem(todoItem){
+      localStorage.setItem(todoItem, todoItem);
+      this.todoItems.push(todoItem);
+    },
+    removeTodoItem(todoItem, index){
+      localStorage.removeItem(todoItem);
+      this.todoItems.splice(index, 1);
+    }
   }
 };
 </script>
