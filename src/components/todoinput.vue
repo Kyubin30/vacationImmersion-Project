@@ -12,7 +12,7 @@ export default {
   methods: {
     addTodo(){
       if(this.newTodo !== ""){
-        this.$emit("add",this.newTodo);
+        this.$emit("addTodo",this.newTodo);
         this.clearInput();
       }
     },

@@ -62,7 +62,7 @@ li{
   list-style: none;
 }
 
-#clock, #clock h1, #clock h2, #hello, .text{
+.none{
   background: none;
   border: none;
   box-shadow: none;
@@ -114,15 +114,15 @@ li{
 }
 
 /*hello*/
-#hello{
+#hello div, #hello input, #hello{
   text-align: center;
   font-size: 32px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 /*input*/
-input{
-  
-}
 #input{
   width: 90%;
   border-radius: 5px;

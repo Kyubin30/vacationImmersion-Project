@@ -1,7 +1,7 @@
 <template>
-  <div id="clock">
-      <h1>{{whatTime}}</h1>
-      <h2>{{whatDay}}</h2>
+  <div id="clock" class="none"> 
+      <h1 class="none">{{whatTime}}</h1>
+      <h2 class="none">{{whatDay}}</h2>
   </div>
 </template>
 

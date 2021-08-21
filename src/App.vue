@@ -2,8 +2,8 @@
   <div id="app">
     <div id="sidebar">
       <clock/>
-      <hello/>
-      <todoinput v-on:add="addTodoItem"/>
+      <hello v-on:addName="addName"/>
+      <todoinput v-on:addTodo="addTodoItem"/>
       <todolist v-bind:propsdata="todoItems" v-on:remove="removeTodoItem"/>
     </div>
     <div id="container">
@@ -46,6 +46,9 @@ export default {
     }
   },
   methods: {
+    addName(name){
+      localStorage.setItem("name",name);
+    },
     addTodoItem(todoItem){
       localStorage.setItem(todoItem, todoItem);
       this.todoItems.push(todoItem);
