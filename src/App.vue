@@ -6,10 +6,7 @@
       <todoinput v-on:addTodo="addTodoItem"/>
       <todolist v-bind:propsdata="todoItems" v-on:remove="removeTodoItem"/>
     </div>
-    <div id="container">
-      <board/>
-      <post/>
-    </div>
+    <board/>
   </div>
 </template>
 
@@ -19,7 +16,6 @@ import hello from "./components/hello";
 import todoinput from "./components/todoinput";
 import todolist from "./components/todolist";
 import board from "./components/board";
-import post from "./components/post";
 
 export default {
   name: "App",
@@ -28,8 +24,7 @@ export default {
     hello,
     todoinput,
     todolist,
-    board,
-    post
+    board
   },
   data(){
     return{

@@ -90,17 +90,7 @@ li{
   margin: 20px;
   border-radius: 10px;
 }
-  
-#container{
-  width: calc(100% - 30% - 60px);
-  height: calc(100% - 40px);
-  float: left;
-  display: inline;
-  margin: 20px;
-  margin-left: 0px;
-  border-radius: 10px;
-}
-  
+
 /*clock*/
 
 #clock h1{
@@ -161,4 +151,32 @@ li{
 #list li:active{
   margin-top: 9px;
   margin-bottom: -2px;
+}
+
+/*board*/
+
+#board{
+  width: calc(100% - 30% - 60px);
+  height: calc(100% - 40px);
+  float: left;
+  display: inline;
+  margin: 20px;
+  margin-left: 0px;
+  border-radius: 10px;
+}
+
+#board img, #plusBtn{
+  width: 30%;
+  height: 30%;
+  margin: 12px;
+  object-fit: cover;
+  display: flex;
+  float: left;
+  border-radius: 5px;
+}
+
+#plusBtn img{
+  margin: 0 auto;
+  height: 40%;
+  margin-top: 60px;
 }
