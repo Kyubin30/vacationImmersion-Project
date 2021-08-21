@@ -83,7 +83,7 @@ li{
 }
   
 #sidebar{
-   width: 30%;
+  width: 30%;
   height: calc(100% - 40px);
   float: left;
   display: inline;

@@ -9,7 +9,7 @@
 export default {
   data(){
     return{
-      name: "",
+      name: localStorage.getItem("name"),
       isName: false
     };
   },
